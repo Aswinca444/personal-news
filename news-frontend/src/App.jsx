@@ -94,7 +94,7 @@ function App() {
     feeds.filter(f => f.trim() !== "").forEach(feed => params.append("feed", feed.trim()));
     keywords.filter(k => k.trim() !== "").forEach(keyword => params.append("keyword", keyword.trim()));
 
-    // Change the URL to your backend's deployed URL when live!
+    // Use your deployed backend URL!
     try {
       const res = await fetch("https://personal-news.onrender.com/top-news?" + params.toString());
       if (!res.ok) throw new Error("Failed to fetch articles");
