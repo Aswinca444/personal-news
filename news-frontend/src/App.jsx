@@ -96,7 +96,7 @@ function App() {
 
     // Change the URL to your backend's deployed URL when live!
     try {
-      const res = await fetch(`http://localhost:3000/top-news?${params.toString()}`);
+      const res = await fetch(`https://personal-news.onrender.com${params.toString()}`);
       if (!res.ok) throw new Error("Failed to fetch articles");
       const data = await res.json();
       setArticles(data);
